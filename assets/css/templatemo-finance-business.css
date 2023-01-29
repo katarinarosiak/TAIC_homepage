@@ -387,7 +387,7 @@ header .navbar {
 }
 
 .Modern-Slider .item-1 .img-fill {
-	background-image: url(../images/slide_01.jpg);
+	background-image: url(../images/malgosia.jpg);
 }
 
 .Modern-Slider .item-2 .img-fill {
@@ -551,6 +551,10 @@ ul.slick-dots {
 
 .services {
 	margin-top: 140px;
+}
+
+.service-item {
+	height: 100%;
 }
 
 .service-item img {
@@ -1191,7 +1195,16 @@ footer .contact-form button.filled-button:hover {
 /* Contact Information */
 
 .contact-information {
-	margin-top: 140px;
+	display:flex;
+	margin-top: 10px;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact-data {
+	font-weight: 600;
+	color: #E8772E;
+	font-size: 15px;
 }
 
 .contact-information .contact-item {
