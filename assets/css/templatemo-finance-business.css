@@ -309,15 +309,13 @@ header .navbar {
 .navbar .navbar-nav .nav-link.current,
 .navbar .navbar-nav .nav-link.show,
 .navbar .navbar-nav .show>.nav-link {
-	color: #E8772E;
-	border-bottom: 3px solid #E8772E;
+	color: #fff;
+	border-bottom: 3px solid #fff;
 }
 .navbar .navbar-toggler-icon {
 	background-image: none;
 }
-.navbar .navbar-toggler {
-	border-color: #fff;
-	background-color: #fff;	
+.navbar .navbar-toggler {	
 	height: 36px;
 	outline: none;
 	border-radius: 0px;
@@ -387,7 +385,7 @@ header .navbar {
 }
 
 .Modern-Slider .item-1 .img-fill {
-	background-image: url(../images/malgosia.jpg);
+	background-image: url(../images/background.jpg);
 }
 
 .Modern-Slider .item-2 .img-fill {
@@ -451,11 +449,11 @@ ul.slick-dots {
 
 .Modern-Slider .item h6 {
   margin-bottom: 15px;
-  font-size: 22px;
+  font-size: 28px;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 1px;
-  color:#E8772E;
+  color:#343434;
   animation:fadeOutRight 1s both;
 }
 
@@ -1363,3 +1361,209 @@ footer .contact-form button.filled-button:hover {
 /* #szkolenia {
 	height: 50px;
 } */
+
+/*
+Gallery
+*/
+
+
+.gallery {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+	background-color: #f7f7f7;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 10%;
+}
+
+.gallery img {
+    flex: 0 0 100px;
+    height: 150px;
+    object-fit: cover;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.lightbox {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 1000;
+}
+
+.lightbox img {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 90%;
+	max-height: 80%;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 90px;
+    right: 10px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 1001;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    border-radius: 5px;
+}
+
+.lightbox .prev,
+.lightbox .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 1001;
+    border-radius: 5px;
+}
+
+.lightbox .prev {
+    left: 10px;
+}
+
+.lightbox .next {
+    right: 10px;
+}
+
+@media (min-width: 480px) {
+    .gallery img {
+        flex-basis: 180px;
+        height: 180px;
+    }
+	.gallery {
+		margin-left: 10%;
+	}
+}
+
+@media (min-width: 768px) {
+    .gallery img {
+        flex-basis: 200px;
+        height: 270px;
+    }
+	.gallery {
+		margin-left: 10%;
+	}
+}
+
+.gallery-container span {
+	text-transform: uppercase;
+	font-size: 15px;
+	color: #666;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.gallery-container h2 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 35px;
+	margin-left: 10%;
+}
+
+.gallery-container em {
+	font-style: normal;
+	color: #E8772E;
+}
+
+.gallery-container p {
+	margin-bottom: 30px;
+}
+
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+}
+
+
+/*
+cards
+*/
+.card {
+    background-color: #f8f8f8;
+	border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 16px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card h4 {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card p {
+    flex-grow: 1;
+    margin-top: 8px;
+    font-size: 16px;
+    min-height: 80px; /* Adjust this value to ensure buttons are aligned */
+	padding-bottom: 15px;
+}
+
+.card a.filled-button {
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+.certificatesDIV span {
+	text-transform: uppercase;
+	font-size: 15px;
+	color: #666;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.certificatesDIV h2 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 35px;
+}
+
+.certificatesDIV em {
+	font-style: normal;
+	color: #E8772E;
+}
+
+.text-onas {
+	margin-left: 15px;
+}
